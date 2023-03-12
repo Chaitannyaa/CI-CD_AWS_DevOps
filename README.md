@@ -46,23 +46,25 @@ So Lets do it 	:hugs:
    ![Capture5](https://user-images.githubusercontent.com/117350787/224550174-f4be6b16-030e-4d12-b19f-f88201ed90bd.PNG)
    
 # Commit all your files to AWS CodeCommit repo from local M/c after signing through your IAM user credentials--->
-     [https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-create-file.html]
-     Make sure you get all your files in AWS CodeCommit repos.
-     ![Capture6](https://user-images.githubusercontent.com/117350787/224550479-0d583109-5535-423a-ae1d-f38a07caa392.PNG)
+     
+   [https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-create-file.html]
+   
+   Make sure you get all your files in AWS CodeCommit repos.
+   ![Capture6](https://user-images.githubusercontent.com/117350787/224550479-0d583109-5535-423a-ae1d-f38a07caa392.PNG)
     
 # Now create new build project, Start build, Check S3 bucket for created buildname.zip file--->
-     ![Capture7](https://user-images.githubusercontent.com/117350787/224551059-0c692bb8-b1eb-413b-9125-cdce1c49fc72.PNG)
-     Note your service role must contain AWSs3FullAccess policy attached.
+![Capture7](https://user-images.githubusercontent.com/117350787/224551059-0c692bb8-b1eb-413b-9125-cdce1c49fc72.PNG)
+  Note your service role must contain AWSs3FullAccess policy attached.
      
-     Start build and check S3 for built .zip file.
-     ![Capture8](https://user-images.githubusercontent.com/117350787/224551346-eee59ec6-ddbb-48f2-9f51-7ba50dcbcbb9.PNG)
+ Start build and check S3 for built .zip file.
+ ![Capture8](https://user-images.githubusercontent.com/117350787/224551346-eee59ec6-ddbb-48f2-9f51-7ba50dcbcbb9.PNG)
   
 # Provision an EC2 instance (ubuntu) and Modify IAM role--->
-     IAM role must have following policies attached.
-     ![Capture10](https://user-images.githubusercontent.com/117350787/224551996-f384eeda-2085-425b-8e6d-f67d7ed37ada.PNG)
+IAM role must have following policies attached.
+![Capture10](https://user-images.githubusercontent.com/117350787/224551996-f384eeda-2085-425b-8e6d-f67d7ed37ada.PNG)
   
 # SSH into EC2 instance and do follow instructions given below to setup CodeDeploy agent on ec2 instance--->
-     ![Capture17](https://user-images.githubusercontent.com/117350787/224555697-2deb716b-3963-4650-ba14-db33a63ff83f.PNG)
+![Capture17](https://user-images.githubusercontent.com/117350787/224555697-2deb716b-3963-4650-ba14-db33a63ff83f.PNG)
 
      
 # Create Application under CodeDeploy service, create deployment group and start deployment--->
