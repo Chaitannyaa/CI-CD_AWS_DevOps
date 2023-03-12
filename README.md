@@ -68,30 +68,30 @@ IAM role must have following policies attached.
 
      
 # Create Application under CodeDeploy service, create deployment group and start deployment--->
-     Note while creating deployment group do select "Never" in "Install AWS CodeDeploy Agent" Because we have already installed AWS codeDeploy agent in previous step.
-     ![Capture11](https://user-images.githubusercontent.com/117350787/224552877-f4c4e133-1e97-407d-9e54-796910ff4909.PNG)
-     
-     Note while creating deployment group you assign/create a service role so it must contain following policies..
-     ![Capture9](https://user-images.githubusercontent.com/117350787/224551659-a0679bd0-e90d-4de1-ba3c-eadf91cbcde2.PNG)
-     
-     Start Deployment...If it shows "Succeeded" then put your EC2 instance public ip address in browser!
-     ![Capture12](https://user-images.githubusercontent.com/117350787/224553539-4f95eae9-c773-4cf4-adfa-a91a3bcbe593.PNG)
+Note while creating deployment group do select "Never" in "Install AWS CodeDeploy Agent" Because we have already installed AWS codeDeploy agent in previous step.
+![Capture11](https://user-images.githubusercontent.com/117350787/224552877-f4c4e133-1e97-407d-9e54-796910ff4909.PNG)
+
+Note while creating deployment group you assign/create a service role so it must contain following policies.
+![Capture9](https://user-images.githubusercontent.com/117350787/224551659-a0679bd0-e90d-4de1-ba3c-eadf91cbcde2.PNG)
+
+Start Deployment...If it shows "Succeeded" then put your EC2 instance public ip address in browser!
+![Capture12](https://user-images.githubusercontent.com/117350787/224553539-4f95eae9-c773-4cf4-adfa-a91a3bcbe593.PNG)
      
 # Now create a CodePipeline to automate the CodeCommit>>CodeBuild>>CodeDeploy--->
-     Configure pipeline setting.
-     Note in AWS CodeCommit stage>>Change detection options --select AWS CodePipeline option.
-     ![Capture13](https://user-images.githubusercontent.com/117350787/224554260-0801a948-5241-427f-b17a-501b59192e09.PNG)
+Configure pipeline setting.
+Note in AWS CodeCommit stage>>Change detection options --select AWS CodePipeline option.
+![Capture13](https://user-images.githubusercontent.com/117350787/224554260-0801a948-5241-427f-b17a-501b59192e09.PNG)
 
-    Create and check three stages..You can check error events if any stage fails. Do Correct if needed.
-    Click release changes..Its done!
+Create and check three stages..You can check error events if any stage fails. Do Correct if needed.
+Click release changes..Its done!
     
 # Now you just commit any changes you want in your code those changes will reflect in website.
-     You can monitor the stages on AWS CodePipeline service console.
-     ![Capture14](https://user-images.githubusercontent.com/117350787/224555035-f20936af-3bab-4407-99c3-4845b0eac4dc.PNG)
-     ![Capture15](https://user-images.githubusercontent.com/117350787/224555142-41c27924-5497-4ef9-b9f5-3c999867e244.PNG)
+You can monitor the stages on AWS CodePipeline service console.
+![Capture14](https://user-images.githubusercontent.com/117350787/224555035-f20936af-3bab-4407-99c3-4845b0eac4dc.PNG)
+![Capture15](https://user-images.githubusercontent.com/117350787/224555142-41c27924-5497-4ef9-b9f5-3c999867e244.PNG)
      
 # You can see commit changes on website !
-      ![Capture16](https://user-images.githubusercontent.com/117350787/224555278-52657f70-f4b1-4872-a70a-9c6a1b1ce71a.PNG)
+![Capture16](https://user-images.githubusercontent.com/117350787/224555278-52657f70-f4b1-4872-a70a-9c6a1b1ce71a.PNG)
 
 Thanks for efforts :sunglasses: and :thumbsup:
 
