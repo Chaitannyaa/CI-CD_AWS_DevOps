@@ -62,30 +62,8 @@ So Lets do it >>>>>
      ![Capture10](https://user-images.githubusercontent.com/117350787/224551996-f384eeda-2085-425b-8e6d-f67d7ed37ada.PNG)
   
   6) SSH into EC2 instance and do follow instructions given below to setup CodeDeploy agent on ec2 instance--->
-     In order to deploy your app to EC2, CodeDeploy needs an agent which actually deploys the code on your EC2.
+     ![Capture17](https://user-images.githubusercontent.com/117350787/224555697-2deb716b-3963-4650-ba14-db33a63ff83f.PNG)
 
-      Create a bash script with the below contents
-
-      install.sh
-      ----------------------
-      #!/bin/bash 
-      # This installs the CodeDeploy agent and its prerequisites on Ubuntu 22.04.  
-      sudo apt-get update 
-      sudo apt-get install ruby-full ruby-webrick wget -y 
-      cd /tmp 
-      wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/releases/codedeploy-agent_1.3.2-1902_all.deb 
-      mkdir codedeploy-agent_1.3.2-1902_ubuntu22 
-      dpkg-deb -R codedeploy-agent_1.3.2-1902_all.deb codedeploy-agent_1.3.2-1902_ubuntu22 
-      sed 's/Depends:.*/Depends:ruby3.0/' -i ./codedeploy-agent_1.3.2-1902_ubuntu22/DEBIAN/control 
-      dpkg-deb -b codedeploy-agent_1.3.2-1902_ubuntu22/ 
-      sudo dpkg -i codedeploy-agent_1.3.2-1902_ubuntu22.deb 
-      systemctl list-units --type=service | grep codedeploy 
-      sudo service codedeploy-agent status
-      ------------------------
-
-      >> bash install.sh      or      ./install.sh
-      >> sudo service codedeploy-agent restart
-      >> sudo service codedeploy-agent status
      
   7) Create Application under CodeDeploy service, create deployment group and start deployment--->
      Note while creating deployment group do select "Never" in "Install AWS CodeDeploy Agent" Because we have already installed AWS codeDeploy agent in previous step.
