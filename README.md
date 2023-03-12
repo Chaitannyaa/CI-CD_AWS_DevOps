@@ -13,7 +13,7 @@ CodePipeline using all AWS services - (AWS CodeCommit + Artifacts + CodeBuild + 
 And
 - You can configure a CodePipeline to do all above stuff in an automated fashion..And your every single change in CodeCommit will reflect in our end delivery(App/Website).
 
-So Lets do it >>>>>
+So Lets do it 	:hugs:
 
 # Create IAM user with these permissions-->
    Note User Access key ID and Secret Access key to access AWS services remotely from our local M/c.
